@@ -1,0 +1,6 @@
+// Import all styles
+//
+// This allows us to output different stylesheets that use conditionals in the same Sass partial
+// See https://github.com/chriseppstein/compass/issues/664#issuecomment-3376954
+
+@import "core";

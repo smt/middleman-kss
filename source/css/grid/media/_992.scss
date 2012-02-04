@@ -1,0 +1,34 @@
+// 992 grid ------------------------------------------------------------------
+
+// Define grid constants. These can be customized for each breakpoint:
+$total-cols: 12;
+
+// You can use ems, px or % to override these defaults:
+// $col-width          : 4em
+// $gutter-width       : 1em
+// $side-gutter-width  : 1em
+
+// We have to add these mixins again to use our redefined grid constants.
+.container {
+  // mixin +container if this element will contain a grid system
+  @include container;
+  // gives us our background stripes for development.
+  @include susy-grid-background; }
+
+// header, #main, footer {
+//   // mixin +full for a full grid width row - it's a shortcut!
+//   @include full; }
+
+.features {
+  @include columns(9, 12);
+  .views-layouts {
+    @include columns(3, 9); }
+  .stylesheets-sass-compass {
+    @include columns(3, 9); }
+  .compass-plugins {
+    @include columns(3, 9);
+    @include omega(9); } }
+
+.moreinfo {
+  @include columns(3, 12);
+  @include omega(12); }

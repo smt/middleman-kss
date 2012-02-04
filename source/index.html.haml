@@ -1,0 +1,27 @@
+---
+title: The Middleman!
+---
+
+- content_for :head do
+  / Put special things in the head if needed. CSS, JS, whatever.
+
+%h2 Table of Contents
+
+/ I know, this is really bad.
+- if current_page.children.length > 0
+  - pages = current_page.children
+  - pages = pages.sort_by { |s| s.path }
+  %ul
+    - for page in pages
+      %li
+        - link_text = page.data ? page.data.title : page.path
+        = link_to link_text, page.path
+        -if page.children.length > 0
+          - subpages = page.children
+          - subpages = subpages.sort_by { |s| s.path }
+          %ul
+            - for child in subpages
+              / %pre= child.to_yaml
+              %li
+                - link_text = child.data ? child.data.title : child.path
+                = link_to link_text, child.path

@@ -1,0 +1,139 @@
+//
+// Main Stylesheet
+//
+
+$ie6: false !default;
+$ie7: false !default;
+$ie8: false !default;
+
+
+
+
+
+
+// Compass Mixins
+@import "compass";
+
+
+
+
+
+
+// HTML5 Boilerplate Colors - uncomment to override defaults
+// $h5bp-text-selection: #fe57a1
+// $h5bp-webkit-tap:     #fe57a1
+// $h5bp-link:           #00e
+// $h5bp-link-hover:     #06e
+// $h5bp-link-visited:   #551a8b
+
+// HTML5 Boilerplate Styles
+@import "h5bp";
+
+@include h5bp-display;
+@include h5bp-base;
+@include h5bp-selection;
+@include h5bp-links;
+@include h5bp-typography;
+@include h5bp-lists;
+@include h5bp-embeds;
+@include h5bp-figures;
+@include h5bp-forms;
+@include h5bp-tables;
+
+
+
+
+
+
+// some padding around the gridless container, will be overriden by media queries
+.container {
+  padding: 0 20px; }
+
+// Susy Grid System:
+@import "grid/susygrid";
+
+// Blueprint Grid System:
+// @import "grid/blueprint"
+
+// 960.gs Grid System:
+// * remember to uncomment "require 'ninesixty'" in config.rb
+// * and "gem 'compass-960-plugin'" in the Gemfile!
+// @import "grid/960gs"
+
+
+
+
+
+
+// Your own styles go here.
+
+h1 {
+  color: #999999;
+  text-transform: uppercase;
+  line-height: 1em; }
+
+h2 {
+  line-height: 1.3em; }
+
+kbd {
+  background-color: #f5f5f5;
+  border: 1px solid #dedede;
+  padding: 0px 3px 2px; }
+
+footer {
+  margin-top: 3em;
+  text-align: right; }
+
+
+
+
+
+
+// Components organized for the KSS styleguide
+
+// 1.1
+@import "components/button";
+
+
+
+
+
+
+// Media queries for our supported screen widths.
+// Comment out any widths (breakpoints) you don't intend to support.
+//
+// Use these imports for everything except grid definitions.
+// Put those in the /grid/media/*.sass partials
+
+// 480px ---------------------------------------------------------------------
+@media only screen and (min-width: 480px) {
+  @import "media/480"; }
+
+// 600px ---------------------------------------------------------------------
+@media only screen and (min-width: 600px) {
+  @import "media/600"; }
+
+// 768px ---------------------------------------------------------------------
+@media only screen and (min-width: 768px) {
+  @import "media/768"; }
+
+// 992px ---------------------------------------------------------------------
+@media only screen and (min-width: 992px) {
+  @import "media/992"; }
+
+// 1382px --------------------------------------------------------------------
+@media only screen and (min-width: 1382px) {
+  @import "media/1382"; }
+
+// 2x - uncomment if you're optimizing for Retina displays -------------------
+// @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
+//   @import "media/2x"
+
+
+
+
+
+
+// HTML5 Boilerplate print styles
+// (apparently deprecated, but I still think there's good stuff in here)
+@import "h5bp/print";

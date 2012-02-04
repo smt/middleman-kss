@@ -1,0 +1,48 @@
+//
+// 960.gs Grid System
+//
+
+// If you want to use 960.gs, be sure to enable it in compass.config & the Gemfile
+
+// Uncomment the following constants to customize grid widths:
+
+// The number of grid columns (default: 12)
+// $ninesixty-columns: 12
+
+// The overall grid width (default: 960px)
+// $ninesixty-grid-width: 960px
+
+// The gutter width (default: 20px)
+// $ninesixty-gutter-width: 20px
+
+@import "960/grid";
+
+.container {
+  // mixin +grid-container if this element will contain columns
+  @include grid-container;
+  @include clearfix;
+  // use the PIE clearfix instead if you need to position elements outside the grid
+  // +pie-clearfix
+}
+
+header {
+  // 1st level grid elements don't require +alpha or +omega mixins
+  @include grid(12); }
+
+#main-content {
+  @include grid(12);
+  .content {
+    @include grid(9);
+    // mixin +alpha if a nested element is the first in a row
+    @include alpha; }
+  .sidebar {
+    @include grid(3);
+    // mixin +omega if a nested element is the last in a row
+    @include omega; }
+  .content-full {
+    @include grid(12);
+    @include alpha;
+    @include omega; } }
+
+footer {
+  @include grid(12); }

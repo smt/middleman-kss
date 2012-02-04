@@ -1,0 +1,124 @@
+@import "compass";
+
+$kss-nav-margin:200px;
+
+.styleguide-header {
+  background:#F8922F;
+  @include box-shadow(#333 0 0 5px);
+  color:#fff;
+  font-size:16px;
+  padding:10px;
+  text-transform:uppercase;
+}
+
+#styleguide {
+  width:1032px;
+  padding-left:$kss-nav-margin;
+
+  > nav[role=main] {
+    float:left;
+    margin-left:-$kss-nav-margin;
+    width:160px;
+    ul {
+      margin-left:10px;
+    }
+    li {
+      color:#666;
+      list-style-type:none;
+      margin:10px 0;
+      a {
+        color:#666;
+        text-decoration:none;
+      }
+    }
+  }
+  .styleguide_index & .nav_index,
+  .styleguide_01_structure & .nav_01_structure,
+  .styleguide_02_colors & .nav_02_colors,
+  .styleguide_03_typography & .nav_03_typography,
+  .styleguide_04_links & .nav_04_links,
+  .styleguide_05_buttons & .nav_05_buttons,
+  .styleguide_06_forms & .nav_06_forms,
+  .styleguide_07_tables & .nav_07_tables,
+  .styleguide_08_dialogs & .nav_08_dialogs,
+  .styleguide_09_graphic & .nav_09_graphic,
+  .styleguide_10_navigation & .nav_10_navigation,
+  .styleguide_11_modules & .nav_11_modules {
+    color:#000;
+    cursor:default;
+    font-weight:bold;
+  }
+}
+
+/*----------------------------------------------------------------------------
+  @group Styleguide Styles
+----------------------------------------------------------------------------*/
+
+h1.styleguide {
+  margin: 0 0 -5px 0;
+  font-size: 24px;
+  color: #000; }
+.styleguide-example {
+  margin: 15px 0;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ddd;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  > h3 {
+    margin: 0;
+    padding: 5px;
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    background: #333;
+    border-top: 1px solid #000;
+    em {
+      float: right;
+      text-transform: none;
+      font-style: normal;
+      font-weight: normal;
+      color: #999; } }
+  .styleguide-description {
+    padding: 10px 5px;
+    background: #f1f1f1;
+    border-bottom: 1px solid #ddd;
+    p:first-child {
+      margin-top: 0; }
+    p:last-child {
+      margin-bottom: 0; } }
+  .styleguide-element {
+    position: relative;
+    padding: 20px;
+    + .styleguide-element {
+      margin-top: -5px;
+      padding-top: 15px;
+      border-top: 1px solid #eee; }
+    .styleguide-modifier-name {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px 8px;
+      font-size: 11px;
+      color: #999;
+      background: #f9f9f9;
+      border: 1px solid #eee;
+      border-top: none; } }
+  .styleguide-html {
+    padding: 5px 10px;
+    background: #edf6f8;
+    border-top: 1px solid #dde7ea;
+    overflow: auto;
+    .highlight {
+      background: none; } }
+  ul.styleguide-modifiers {
+    margin: 0 0 0 10px;
+    li {
+      list-style-type: none;
+      margin-left: 0;
+      strong {
+        font-family: Monaco, monospace;
+        font-size: 12px;
+        font-weight: normal;
+        color: #222; } } } }
+/* @end */
+

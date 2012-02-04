@@ -1,0 +1,17 @@
+// ==========================================================================
+// Links
+// ==========================================================================
+
+@mixin h5bp-links {
+  a {
+    color: $h5bp-link;
+    &:visited {
+      color: $h5bp-link-visited; }
+    &:hover {
+      color: $h5bp-link-hover; }
+    &:focus {
+      outline: thin dotted; }
+    // Improve readability when focused and hovered in all browsers: h5bp.com/h
+    &:hover, &:active {
+      outline: 0; } } }
+

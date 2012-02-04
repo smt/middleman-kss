@@ -1,0 +1,48 @@
+// Your standard form button.
+//
+// :hover    - Highlights when hovering.
+// :disabled - Dims the button when disabled.
+// .primary  - Indicates button is the primary action.
+// .smaller  - A smaller button
+//
+// Styleguide 5.1.1
+button {
+  padding: 5px 15px;
+  line-height: normal;
+  font-family: "Helvetica Neue", Helvetica;
+  font-size: 12px;
+  font-weight: bold;
+  color: #666;
+  @include text-shadow(0 1px rgba(255, 255, 255, 0.9));
+  @include border-radius(3px);
+  border: 1px solid #ddd;
+  border-bottom-color: #bbb;
+  background-color: #f5f5f5;
+  @include background-image(linear-gradient(#f5f5f5, #e5e5e5));
+  @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.15));
+  cursor: pointer;
+
+  &.primary, &.primary:hover {
+    color: #fff;
+    @include text-shadow(0 -1px 0 rgba(0, 0, 0, 0.4));
+    border-color: #74bb5a;
+    border-bottom-color: #509338;
+    background-color: #8add6d;
+    @include background-image(linear-gradient(#8add6d, #60b044));
+    @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+  }
+  &.smaller {
+    font-size: 11px;
+    padding: 4px 7px;
+  }
+  &:hover {
+    color: #337797;
+    background-color: #f0f7fa;
+    @include background-image(linear-gradient(#f0f7fa, #d8eaf2));
+    border-color: #cbe3ee;
+    border-bottom-color: #97c7dd;
+  }
+  &:disabled {
+    opacity: 0.5;
+  }
+}
