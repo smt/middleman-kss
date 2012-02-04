@@ -13,6 +13,8 @@ I also took the opportunity to port the KSS example to Sass+Compass with the HTM
 
 Be sure to check the Gemfile to make sure it is right for your system. I use a Mac, so `rb-fsevent` is included.
 
+Please also review the .rvmrc file and alter it to taste. When you `cd` to the project root, rvm will create a new gemset for this project and activate it, so as not to pollute your system.
+
 ```
 $ git clone git://github.com/smt/middleman-kss
 $ cd middleman-kss
